@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Home</h1>
+
+
+
+ 	<form action="editprofile" method="GET">
+  		<input type="hidden" name="username" value="{{username}}" />
+	<input type="submit" value="Edit my profile"/>
+	    
+    </form>
+
+ 	<form action="home" method="POST">
+	    Tweet: <textarea name ="text" type="text" required></textarea><br>
+	    <input type="hidden" name="user" value="{{username}}" />
+	    <input type="checkbox" name="postinf" value="1">post in facebook<br>
+	    <input type="hidden" name="postinf" value="0" />
+  		<input type="checkbox" name="postint" value="1">post in twitter<br>
+  		<input type="hidden" name="postint" value="0" />
+  		
+	    
+	    <input type="submit" value="Say it"/>
+	    
+    </form>
+
+
+    {{#tweets}}
+    <p>{{id}}  {{date}}  {{text}} {{user}}</p>
+    {{/tweets}}
+    
+    
+</body>
+</html>

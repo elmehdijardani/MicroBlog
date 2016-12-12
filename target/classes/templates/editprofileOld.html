@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Edit profile</title>
+</head>
+<body>
+    <h1>Edit profile</h1>
+    <form action="editprofile" method="POST">
+    Username: <input name ="username" type="text" value="{{user.getUsername}}" required/><br>
+    Email: <input name="email" type="text" value="{{user.getEmail}}"required/><br>
+    Password : <input name="password" type="password" value="{{user.getPassword}}" required/><br>
+    Facebook Id: <input name="facebookid" type="text" value="{{user.getFacebookid}}"/><br>
+    Twitter Id: <input name="twitterid" type="text" value="{{user.getTwitterid}}"/><br>
+    
+    
+    <input type="submit" value="Save changes"/>
+    
+    </form>
+    
+    
+</body>
+</html>

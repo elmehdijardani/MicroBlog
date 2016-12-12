@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts."/>
+
+    <title>Social Network - Star Wars</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-social.css"/>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="css/pure-min.css"/>
+    <link rel="stylesheet" href="css/grids-responsive-min.css"/>
+
+    <link rel="stylesheet" href="css/blog.css"/>
+
+</head>
+
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title"><a href="index">Star Wars Network</a></h1>
+            <h2 class="brand-tagline">A far far away software</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="login">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+
+            <div class="posts">
+                <h1 class="content-subhead">Sign up</h1>
+               
+
+                    <img id="blah" src="#" alt="your image" />
+
+                <form action="signup" method="POST" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+                 <div style="float:left">
+                    <input  style="margin-top:5px;" id="fileInput" type="file" name="photo" onchange="readURL(this);">
+                </div>
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="username">Username</label>
+                            <input id="username" name ="username" type="text" required/>
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text" required/>
+                        </div>
+                        
+                        <div class="pure-control-group">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" required/>
+                        </div>
+
+                       <div class="pure-control-group">
+                            <label for="fbid">Facebook Id</label>
+                            <input id="fbid" name="facebookid" type="text"/>
+                        </div>
+                        
+                        <div class="pure-control-group">
+                            <label for="twtid">Twitter Id</label>
+                            <input id="twtid" name="twitterid" type="text"/>
+                        </div>
+
+                   
+
+                        <div class="pure-controls">
+                            <button type="submit" class="pure-button pure-button-primary">Sign up</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</script>
+</body>
+</html>
